@@ -20,8 +20,18 @@ namespace Kolokwium
             };
         }
 
-        public double Line1Angle()
+        public Line(Point a, Point b)
         {
+            EndPoints = new List<Point>
+            {
+                a,
+                b
+            };
+        }
+
+        public double CheckLine(int lineNr)
+        {
+
 
             return;
         }

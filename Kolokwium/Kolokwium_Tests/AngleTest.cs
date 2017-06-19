@@ -20,12 +20,48 @@ namespace Kolokwium_Tests
 
             Line ang = new Line(a, b);
 
-            if (!expectedAngle.Equals(ang.Line1Angle()))
+            if (!expectedAngle.Equals(ang.CheckLine()))
             {
                 Assert.Fail();
             }
         }
 
+        [TestMethod]
+        [TestCategory("Logic")]
+        public void CheckLine45Angle()
+        {
+            double expectedAngle = 45;
 
+            int lineNr = 1;
+
+            Point a = new Point(0, 0);
+            Point b = new Point(5, 5);
+
+            Line ang = new Line(a, b);
+
+            if (!expectedAngle.Equals(ang.Angle(lineNr)))
+            {
+                Assert.Fail();
+            }
+        }
+
+        [TestMethod]
+        [TestCategory("Logic")]
+        public void CheckLine0Angle()
+        {
+            double expectedAngle = 0;
+
+            int lineNr = 2;
+
+            Point a = new Point(0, 0);
+            Point b = new Point(0, 5);
+
+            Line ang = new Line(a, b);
+
+            if (!expectedAngle.Equals(ang.Angle(lineNr)))
+            {
+                Assert.Fail();
+            }
+        }
     }
 }
