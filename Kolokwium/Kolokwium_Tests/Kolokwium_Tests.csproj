@@ -55,6 +55,12 @@
     <Compile Include="AngleTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Kolokwium\Kolokwium.csproj">
+      <Project>{ce24dd59-b033-42be-97d5-92d425635395}</Project>
+      <Name>Kolokwium</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
