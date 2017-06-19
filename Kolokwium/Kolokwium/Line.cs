@@ -29,6 +29,7 @@ namespace Kolokwium
             };
         }
 
+
         public double CheckLine(int lineNr)
         {
 

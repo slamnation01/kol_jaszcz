@@ -63,5 +63,24 @@ namespace Kolokwium_Tests
                 Assert.Fail();
             }
         }
+
+        [TestMethod]
+        [TestCategory("Logic")]
+        public void CheckLineFormula()
+        {
+            //y = ax + b
+
+            int expectedA = 0, expectedB = 0;
+
+            Line lin = new Line(new Point(0, 0), new Point(10, 0));
+
+            lin.GetFormula();
+
+            if (!(lin.FormA == expectedA)&& (lin.FormB == expectedB))
+            {
+                Assert.Fail();
+            }
+
+        }
     }
 }
