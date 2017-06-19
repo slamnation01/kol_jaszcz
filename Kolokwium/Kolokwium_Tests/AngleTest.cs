@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Kolokwium;
+using Kolokwium.Kol_slam;
 
 namespace Kolokwium_Tests
 {
@@ -14,12 +15,17 @@ namespace Kolokwium_Tests
         {
             double expectedAngle = 45;
 
-            Angle ang = new Angle(a, b);
+            Point a = new Point(0, 0);
+            Point b = new Point(5, 5);
+
+            Line ang = new Line(a, b);
 
             if (!expectedAngle.Equals(ang.Line1Angle()))
             {
                 Assert.Fail();
             }
         }
+
+
     }
 }
